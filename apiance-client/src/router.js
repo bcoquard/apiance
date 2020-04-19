@@ -11,7 +11,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: () => import(/* webpackChunkName: "app-start" */ './views/app'),
+      component: () => import(/* webpackChunkName: "app-start" */ './views/app/loggedin'),
       redirect: '/app/home',
       beforeEnter: AuthRequired,
       children: [
@@ -19,22 +19,12 @@ export default new Router({
           path: '/app/apis/:id',
           props: true,
           name: 'apis',
-          component: () => import(/* webpackChunkName: "Home" */ './views/app/Apis.vue')
+          component: () => import(/* webpackChunkName: "Apis" */ './views/app/loggedin/Apis.vue')
         },
         {
           path: '/app/home',
           name: 'home',
-          component: () => import(/* webpackChunkName: "About" */ './views/app/Home.vue')
-        },
-        {
-          path: '/app/performances',
-          name: 'performances',
-          component: () => import(/* webpackChunkName: "About" */ './views/app/Home.vue')
-        },
-        {
-          path: '/app/codes',
-          name: 'codes',
-          component: () => import(/* webpackChunkName: "About" */ './views/app/Home.vue')
+          component: () => import(/* webpackChunkName: "About" */ './views/app/loggedin/Home.vue')
         },
         {
           path: '/app/about',
@@ -44,15 +34,33 @@ export default new Router({
       ]
     }, {
       path: '/admin',
-      name: 'admin',
-      component: () => import(/* webpackChunkName: "Home" */ './views/Admin.vue')
-    },
-    {
+      component: () => import(/* webpackChunkName: "Admin" */ './views/app/loggedin/admin'),
+      redirect: '/admin/home',
+      beforeEnter: AuthRequired,
+      children: [
+        {
+          path: '/admin/home',
+          name: 'admin-home',
+          component: () => import(/* webpackChunkName: "Apis" */ './views/app/loggedin/admin/Admin.vue')
+        },
+        {
+          path: '/admin/swaggers',
+          name: 'admin-swaggers',
+          component: () => import(/* webpackChunkName: "Apis" */ './views/app/loggedin/admin/Swaggers.vue')
+        },
+        {
+          path: '/admin/utils',
+          name: 'admin-swaggerutils',
+          component: () => import(/* webpackChunkName: "Apis" */ './views/app/loggedin/admin/Admin.vue')
+        }
+
+      ]
+    }, {
       path: '/login',
       name: 'login',
-      component: () => import(/* webpackChunkName: "Login" */ './views/Login.vue')
+      component: () => import(/* webpackChunkName: "Login" */ './views/app/Login.vue')
     },
-    { path: '/error', component: () => import(/* webpackChunkName: "error" */ './views/Error.vue') },
-    { path: '*', component: () => import(/* webpackChunkName: "error" */ './views/Error.vue') }
+    { path: '/error', component: () => import(/* webpackChunkName: "error" */ './views/app/Error.vue') },
+    { path: '*', component: () => import(/* webpackChunkName: "error" */ './views/app/Error.vue') }
   ]
 })

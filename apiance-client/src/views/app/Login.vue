@@ -90,7 +90,10 @@ export default {
     },
     loginError(val) {
       if (val != null) {
-        this.$notify('error', 'Login Error', val, { duration: 3000, permanent: false })
+        this.$notify('error', 'Login Error', val, {
+          duration: 3000,
+          permanent: false
+        })
       }
     }
   }
@@ -112,7 +115,7 @@ export default {
 #owl-login {
   width: 116px;
   height: 92px;
-  background: url(../assets/images/face.png);
+  background: url(../../assets/images/face.png);
   position: absolute;
   top: -82px;
   left: 50%;
@@ -121,7 +124,7 @@ export default {
 #owl-login .eyes {
   width: 100%;
   height: 100%;
-  background: url(../assets/images/eyes.png);
+  background: url(../../assets/images/eyes.png);
   opacity: 0;
   transition: 0.1s ease-out 0s;
 }
@@ -133,8 +136,9 @@ export default {
   right: 5px;
   transform: translateX(57px) scale(0.8);
   transform-origin: 0 40px;
-  transition: background-position 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s linear;
-  background: url(../assets/images/arm-up-right.png) no-repeat 0 25px;
+  transition: background-position 0.3s ease-in-out, transform 0.3s ease-in-out,
+    opacity 0.3s linear;
+  background: url(../../assets/images/arm-up-right.png) no-repeat 0 25px;
   opacity: 0;
 }
 #owl-login .arm-up-left {
@@ -145,14 +149,15 @@ export default {
   left: -3px;
   transform: translateX(-34px) scale(0.8);
   transform-origin: 0 40px;
-  transition: background-position 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s linear;
-  background: url(../assets/images/arm-up-left.png) no-repeat 0 25px;
+  transition: background-position 0.3s ease-in-out, transform 0.3s ease-in-out,
+    opacity 0.3s linear;
+  background: url(../../assets/images/arm-up-left.png) no-repeat 0 25px;
   opacity: 0;
 }
 #owl-login .arm-down-left {
   width: 43px;
   height: 25px;
-  background: url(../assets/images/arm-down-left.png);
+  background: url(../../assets/images/arm-down-left.png);
   position: absolute;
   bottom: 2px;
   left: -34px;
@@ -161,7 +166,7 @@ export default {
 #owl-login .arm-down-right {
   width: 43px;
   height: 26px;
-  background: url(../assets/images/arm-down-right.png);
+  background: url(../../assets/images/arm-down-right.png);
   position: absolute;
   bottom: 1px;
   right: -40px;
@@ -188,7 +193,7 @@ export default {
   transform: translateX(12px) scale(0) translateY(-8px);
 }
 #bg-1 {
-  background-image: url(../assets/images/bg/1.png);
+  background-image: url(../../assets/images/bg/1.png);
   background-color: #fff;
   background-position: center center;
   background-repeat: no-repeat;

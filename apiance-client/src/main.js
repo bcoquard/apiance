@@ -3,6 +3,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import { store } from './store'
+import VueLodash from 'vue-lodash'
+import lodash from 'lodash'
 
 // i18n
 import VueI18n from 'vue-i18n'
@@ -33,6 +35,7 @@ Vue.config.productionTip = false
 Vue.use(VueI18n)
 Vue.use(VueMoment)
 Vue.use(Snotify, optionsSnotify)
+Vue.use(VueLodash, { lodash: lodash })
 
 const messages = { en: en, fr: fr }
 const locale = (localStorage.getItem('currentLanguage') && localeOptions.filter(x => x.id === localStorage.getItem('currentLanguage')).length > 0) ? localStorage.getItem('currentLanguage') : defaultLocale

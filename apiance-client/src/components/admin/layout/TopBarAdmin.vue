@@ -5,8 +5,8 @@
 
       <div class="flex-grow-1"></div>
 
-      <v-btn icon :to="{ name: 'admin-home' }">
-        <v-icon>fa-user-shield</v-icon>
+      <v-btn icon :to="{ name: 'home' }">
+        <v-icon>fa-home</v-icon>
       </v-btn>
 
       <v-btn icon v-on:click="sendLogout">
@@ -34,7 +34,7 @@
 import { mapGetters, mapActions } from 'vuex'
 import { localeOptions } from '@/config'
 export default {
-  name: 'TopBar',
+  name: 'TopBarAdmin',
   components: {},
   data() {
     return {

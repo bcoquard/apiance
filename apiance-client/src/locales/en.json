@@ -14,5 +14,12 @@
     "apis": "Apis List",
     "performances": "Performances",
     "codes": "Codes"
+  },
+  "admin": {
+    "drawer": {
+      "home": "Admin home",
+      "swaggers": "Swaggers",
+      "swaggerutils": "Utils"
+    }
   }
 }

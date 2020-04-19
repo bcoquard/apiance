@@ -7,7 +7,7 @@
 <script>
 // @ is an alias to /src
 import SwaggerUI from 'swagger-ui'
-import { RepositoryFactory } from '../../repositories/repository-factory'
+import { RepositoryFactory } from '@/repositories/repository-factory'
 const ContractsRepository = RepositoryFactory.get('contracts')
 
 export default {
@@ -49,5 +49,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~swagger-ui/dist/swagger-ui.css';
+@import "~swagger-ui/dist/swagger-ui.css";
 </style>

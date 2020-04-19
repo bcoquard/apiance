@@ -60,10 +60,8 @@ export default {
       //   )
     },
     logout({ commit }) {
-      return function () {
-        localStorage.removeItem('user')
-        commit('setLogout')
-      }
+      localStorage.removeItem('user')
+      commit('setLogout')
       // firebase
       // .auth()
       // .signOut()

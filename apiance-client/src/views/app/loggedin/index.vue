@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper">
+  <div>
     <TopBar />
     <Drawer />
     <v-content>
@@ -12,9 +12,9 @@
 </template>
 <script>
 // import Sidebar from "@/containers/Sidebar";
-import TopBar from '../../components/layout/TopBar'
-import Drawer from '../../components/layout/Drawer'
-import Footer from '../../components/layout/Footer'
+import TopBar from '@/components/layout/TopBar'
+import Drawer from '@/components/layout/Drawer'
+import Footer from '@/components/layout/Footer'
 
 export default {
   data() {
